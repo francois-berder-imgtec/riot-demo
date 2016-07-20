@@ -1,0 +1,12 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 2.8)
+
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin)
+INCLUDE_DIRECTORIES(/usr/include/letmecreate)
+
+ADD_EXECUTABLE(demo1 demo1.c)
+TARGET_LINK_LIBRARIES(demo1 letmecreate_click letmecreate_core)
+INSTALL(TARGETS demo1 RUNTIME DESTINATION bin)
+
+ADD_EXECUTABLE(demo2 demo2.c)
+TARGET_LINK_LIBRARIES(demo2 letmecreate_click letmecreate_core)
+INSTALL(TARGETS demo2 RUNTIME DESTINATION bin)
